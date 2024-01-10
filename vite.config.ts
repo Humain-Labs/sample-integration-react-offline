@@ -15,10 +15,10 @@ const transformIndexHtmlPlugin = () => {
     name: 'html-transform',
     transformIndexHtml(html) {
       const cspContent = [
-        `default-src 'self' http://localhost:5173`,
-        `style-src 'self' http://localhost:5173 'unsafe-inline'`,
-        `script-src 'self' http://localhost:5173`,
-        `img-src 'self' http://localhost:5173 data:` // data: is needed for inline background images, e.g. used in checkbox-wrapper and radio-button-wrapper
+        `default-src 'self' http://localhost:3010`,
+        `style-src 'self' http://localhost:3010 'unsafe-inline'`,
+        `script-src 'self' http://localhost:3010`,
+        `img-src 'self' http://localhost:3010 data:` // data: is needed for inline background images, e.g. used in checkbox-wrapper and radio-button-wrapper
       ].join('; ');
 
       const headPartials = [
@@ -39,10 +39,10 @@ const transformIndexHtmlPlugin = () => {
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 5173,
+    port: 3010,
   },
   preview: {
-    port: 5173,
+    port: 3010,
   },
   plugins: [transformIndexHtmlPlugin(), react()],
 })
