@@ -3,7 +3,7 @@
 
 var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
-var componentsJs = require('@porsche-design-system/components-js');
+var componentsJs = require('porsche-offline-design-system/components-js');
 
 // to warn users about missing PorscheDesignSystemProvider, we set the default values as undefined
 const PorscheDesignSystemContext = react.createContext({

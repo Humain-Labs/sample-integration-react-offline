@@ -1,1 +1,1 @@
-export * from '@porsche-design-system/components-js/jsdom-polyfill';
+export * from 'porsche-offline-design-system/components-js/jsdom-polyfill';

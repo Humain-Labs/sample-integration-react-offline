@@ -5,7 +5,9 @@ set -e
 tag_name="components-react-v3.9.0" 
 
 
-repo_dir="$(pwd)"
+repo_dir="$(pwd)" # run this via package.json, so you are in the right dir.
+echo "current dir: $repo_dir"
+
 dss_path="$repo_dir/repositories/porsche-design-system"
 
 function delete_clone_repo {
@@ -35,7 +37,7 @@ function delete_transform_copy_node_modules {
     yarn install --check-files
     node ./scripts/transformPorscheDesignSystem.js
     #rm -r "components*"
-    cp -r "node_modules/@porsche-design-system/{components-react,components-js}" .
+    cp -r "./node_modules/@porsche-design-system/" .
 }
 
 # delete_clone_repo
