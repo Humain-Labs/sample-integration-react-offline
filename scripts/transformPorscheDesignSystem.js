@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-const [, , BASE_URL] = process.argv
+// const [, , BASE_URL] = process.argv
 // const BASE_URL='${location.protocol ?? `http:`}//${location.host ?? `localhost`}'
+const BASE_URL = '.'
 
 console.log( "We are replacing all instances of cdn.ui.porsche with", BASE_URL )
 
@@ -31,7 +32,7 @@ npmFilePaths.forEach((filePath) => {
     .replace(/(?<!\\)"https:\/\/cdn\.ui\.porsche\..*?\(.*?\)/g, `"${BASE_URL}"`)
     .replace(/\\"https:\/\/cdn\.ui\.porsche\..*?\(.*?\)/g, `\\"${BASE_URL}\\"`) // JSON.
     .replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)
-    .replace(/`https:\/\/cdn\.ui\.porsche\..*?`/g, `'${BASE_URL}'`);
+    .replace(/`https:\/\/cdn\.ui\.porsche\..*?`/g, `'${BASE_URL}'`)
   
   if ( fileContent != transformedFileContent ){
     console.log( "changed stuff in " , filePath )
@@ -43,7 +44,10 @@ const publicFilePaths = getAllFiles('./public/porsche-design-system').filter(fil
 
 publicFilePaths.forEach((filePath) => {
   const fileContent = fs.readFileSync(filePath, 'utf8');
-  const transformedFileContent = fileContent.replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)
+  const transformedFileContent = fileContent
+    .replace("url('https://cdn.ui.porsche.com/", "url('/") // we don't want "./" in css just "/" so root url is referenced.
+    .replace("url('https://cdn.ui.porsche.cn/", "url('/") // we don't want "./" in css just "/" so root url is referenced.
+    .replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)
   if ( fileContent != transformedFileContent ){
     console.log( "changed stuff in " , filePath )
   }

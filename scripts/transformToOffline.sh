@@ -32,7 +32,7 @@ function delete_transform_node_modules {
     echo "delete node_modules/@porsche-design-system/"
     rm -r "node_modules/@porsche-design-system"
     yarn install --check-files
-    node ./scripts/transformPorscheDesignSystem.js . # this was "http://localhost:3010" instead of "."
+    node ./scripts/transformPorscheDesignSystem.js
 }
 
 delete_clone_repo
