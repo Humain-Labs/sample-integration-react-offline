@@ -28,14 +28,17 @@ function delete_copy_cdn_files {
     echo "copy '/packages/assets/cdn/' to '$dss_subdir'"
     cp -r "$dss_path/packages/assets/cdn/." "$repo_dir$dss_subdir"
 }
-function delete_transform_node_modules {
+function delete_transform_copy_node_modules {
+    # @todo we could do this in a different order....
     echo "delete node_modules/@porsche-design-system/"
     rm -r "node_modules/@porsche-design-system"
     yarn install --check-files
     node ./scripts/transformPorscheDesignSystem.js
+    #rm -r "components*"
+    cp -r "node_modules/@porsche-design-system/{components-react,components-js}" .
 }
 
-delete_clone_repo
-install_deps
+# delete_clone_repo
+# install_deps
 delete_copy_cdn_files
-delete_transform_node_modules
+delete_transform_copy_node_modules
