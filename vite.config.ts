@@ -8,7 +8,7 @@ import {
   getFontFaceStylesheet,
   getFontLinks,
   getIconLinks,
-} from '@porsche-design-system/components-js/partials';
+} from '@porsche-offline-design-system/components-js/partials';
 
 const transformIndexHtmlPlugin = () => {
   return {

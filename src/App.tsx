@@ -1,5 +1,5 @@
 import './App.css'
-import {PHeading, PButton, PTextFieldWrapper, PSelectWrapper, PButtonPure} from '@porsche-design-system/components-react';
+import {PHeading, PButton, PTextFieldWrapper, PSelectWrapper, PButtonPure} from '@porsche-offline-design-system/components-react';
 
 
 function App() {

@@ -13,9 +13,16 @@
   "workspaces": [
     "components-react",
     "components-js"
+  ], 
+  "//": [
+    "use line below in devDependencies",
+    "@porsche-design-system/components-react: 3.9.0"
   ],
+  "dependencies": {
+    "@porsche-offline-design-system/components-react": "file:./components-react",
+    "@porsche-offline-design-system/components-js": "file:./components-js"
+  },
   "devDependencies": {
-    "@porsche-design-system/components-react": "3.9.0",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
