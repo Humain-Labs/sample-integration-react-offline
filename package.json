@@ -14,10 +14,6 @@
     "components-react",
     "components-js"
   ],
-  "dependencies": {
-    "@porsche-offline-design-system/components-js": "./components-js",
-    "@porsche-offline-design-system/components-react": "./components-react"
-  },
   "devDependencies": {
     "@porsche-design-system/components-react": "3.9.0",
     "@types/react": "^18.2.43",
