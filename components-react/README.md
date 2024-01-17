@@ -11,25 +11,25 @@ to learn more.
 Run the following command using [npm](https://www.npmjs.com):
 
 ```bash
-npm install @porsche-design-system/components-react
+npm install @porsche-offline-design-system/components-react
 ```
 
 If you prefer [Yarn](https://yarnpkg.com), use the following command instead:
 
 ```bash
-yarn add @porsche-design-system/components-react
+yarn add @porsche-offline-design-system/components-react
 ```
 
 ### Usage
 
-After adding the `@porsche-design-system/components-react` package to your project, you've to extend the standard React
+After adding the `@porsche-offline-design-system/components-react` package to your project, you've to extend the standard React
 setup by the `PorscheDesignSystemProvider`.
 
 ```tsx
 // index.tsx
 
 import ReactDOM from 'react-dom';
-import { PorscheDesignSystemProvider } from '@porsche-design-system/components-react';
+import { PorscheDesignSystemProvider } from '@porsche-offline-design-system/components-react';
 import './index.css';
 import { App } from './App';
 
@@ -48,7 +48,7 @@ Change your App file to use at least one Porsche Design System component, for ex
 ```tsx
 // App.tsx
 
-import { PButton } from '@porsche-design-system/components-react';
+import { PButton } from '@porsche-offline-design-system/components-react';
 
 export const App = (): JSX.Element => (
   <div className="App">

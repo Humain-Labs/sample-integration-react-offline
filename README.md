@@ -5,7 +5,7 @@ The porsche-design-system uses a CDN by default (which we can not use when offli
 ## How to use this
 
 - include this repo in your consumer-repo (with the right version tag, like)
-  ``"porsche-offline-design-system": "https://github.com/Humain-Labs/sample-integration-react-offline.git#v3.9.0"``
+  ``"@porsche-offline-design-system/manager": "https://github.com/Humain-Labs/sample-integration-react-offline.git#v3.9.0"``
 - Copy CDN files `cp -r ./node_modules/porsche-design-system-offline/public/. ./public`
 - Done. This mostly works
 
@@ -16,7 +16,7 @@ The porsche-design-system uses a CDN by default (which we can not use when offli
   - There we replace all instances of ``cdn.ui.porsche.(com|cn)`` with a dot (`.`). We replace with an empty string in css so we get `url('/porsche-design-system/fonts/porsche-next..')`, with resolves to the root-url.
   - It creates the files that are required for the CDN (in public/porsche-design-system) by cloning the porsche-design-system - repo and running the appropriate scripts, then copying them to the public-folder.
 - run `yarn run transformToOffline`
-- replace all instances of @porsche-design-system with porsche-offline-design-system 
+- replace all instances of @porsche-design-system with @porsche-offline-design-system 
   ``components-js`` is a dependency of ``components-react``
 - copy node_modules/@porsche-design-system/components-react & components-js to ./components-react & components-js
 - commit your changes
@@ -27,9 +27,10 @@ The porsche-design-system uses a CDN by default (which we can not use when offli
 - This repo's package.json has ``exports`` which kind of reflect ``exports`` in @porsche-design-system/components-react and @porsche-design-system/components-js (with nesting, careful with the slashes, they need to be different ). This can probably be done more elegant with [portal](https://yarnpkg.com/protocol/portal), link, file or workspace
 
 
-## FAQ
+## FAQ & Tips
 
 - Why not use @porsche-design-system? - It's protected, so you can't host your own packages.
+- If you are experimenting with this in the consumer repo run ``rm -r node_modules/.cache || yarn install`` because odd caching things might happen otherwise
 
 
 ## Problems

@@ -29,7 +29,7 @@ npmFilePaths.forEach((filePath) => {
     .replace( regex , "`" + BASE_URL + "`" + "+$1" ) */
 
   const transformedFileContent = fileContent
-    .replace( "@porsche-design-system" , "porsche-offline-design-system" )
+    .replace( "@porsche-design-system" , "@porsche-offline-design-system" )
     .replace(/(?<!\\)"https:\/\/cdn\.ui\.porsche\..*?\(.*?\)/g, `"${BASE_URL}"`)
     .replace(/\\"https:\/\/cdn\.ui\.porsche\..*?\(.*?\)/g, `\\"${BASE_URL}\\"`) // JSON.
     .replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)
@@ -46,7 +46,7 @@ const publicFilePaths = getAllFiles('./public/porsche-design-system').filter(fil
 publicFilePaths.forEach((filePath) => {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const transformedFileContent = fileContent
-    .replace( "@porsche-design-system" , "porsche-offline-design-system" )
+    .replace( "@porsche-design-system" , "@porsche-offline-design-system" )
     .replace("url('https://cdn.ui.porsche.com/", "url('/") // we don't want "./" in css just "/" so root url is referenced.
     .replace("url('https://cdn.ui.porsche.cn/", "url('/") // we don't want "./" in css just "/" so root url is referenced.
     .replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)

@@ -1,6 +1,6 @@
 'use strict';
 
-var testing = require('porsche-offline-design-system/components-js/testing');
+var testing = require('@porsche-offline-design-system/components-js/testing');
 
 
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var styles = require('porsche-offline-design-system/components-js/styles');
+var styles = require('@porsche-offline-design-system/components-js/styles');
 
 
 

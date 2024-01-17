@@ -1,1 +1,1 @@
-export * from 'porsche-offline-design-system/components-js/partials';
+export * from '@porsche-offline-design-system/components-js/partials';
