@@ -40,7 +40,7 @@ function delete_transform_copy_node_modules {
     cp -r "./node_modules/@porsche-design-system/" .
 }
 
-# delete_clone_repo
-# install_deps
+delete_clone_repo
+install_deps
 delete_copy_cdn_files
 delete_transform_copy_node_modules

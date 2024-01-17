@@ -28,6 +28,30 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
+  "exports": {
+    "./components-react": {
+      "types": "./esm/public-api.d.ts",
+      "import": "./esm/public-api.mjs",
+      "default": "./cjs/public-api.cjs"
+    },
+    "./components-react/styles": {
+      "sass": "./components-react/styles/_index.scss",
+      "types": "./components-react/styles/esm/index.d.ts",
+      "import": "./components-react/styles/esm/index.mjs",
+      "default": "./components-react/styles/cjs/index.cjs"
+    },
+    "./components-js": {
+      "types": "./components-js/esm/index.d.ts",
+      "import": "./components-js/esm/index.mjs",
+      "default": "./components-js/cjs/index.cjs"
+    },
+    "./components-js/styles": {
+      "sass": "./components-js/styles/_index.scss",
+      "types": "./components-js/styles/esm/index.d.ts",
+      "import": "./components-js/styles/esm/index.mjs",
+      "default": "./components-js/styles/cjs/index.cjs"
+    }
+  },
   "packageManager": "yarn@1.22.19",
   "volta": {
     "node": "18.18.1",
