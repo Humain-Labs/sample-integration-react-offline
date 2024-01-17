@@ -12,8 +12,8 @@
   },
   "workspaces": [ "components-react", "components-js"], 
   "dependencies": {
-    "@porsche-offline-design-system/components-js": "link:./components-js",
-    "@porsche-offline-design-system/components-react": "link:./components-react"
+    "@porsche-offline-design-system/components-js": "portal:./components-js",
+    "@porsche-offline-design-system/components-react": "portal:./components-react"
   },
   "devDependencies": {
     "react-dom": "^18.2.0",
@@ -30,7 +30,6 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
-  "packageManager": "yarn@1.22.19",
   "volta": {
     "node": "18.18.1",
     "yarn": "1.22.19"
