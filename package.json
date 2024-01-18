@@ -13,14 +13,14 @@
   "workspaces": [
     "components-react",
     "components-js"
-  ], 
+  ],
   "//": [
     "use line below in devDependencies",
     "@porsche-design-system/components-react: 3.9.0"
   ],
   "dependencies": {
-    "@porsche-offline-design-system/components-react": "file:./components-react",
-    "@porsche-offline-design-system/components-js": "file:./components-js"
+    "@porsche-offline-design-system/components-js": "https://github.com/Humain-Labs/sample-integration-react-offline.git#workspace=@porsche-offline-design-system/components-js",
+    "@porsche-offline-design-system/components-react": "https://github.com/Humain-Labs/sample-integration-react-offline.git#workspace=@porsche-offline-design-system/components-react"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -38,6 +38,6 @@
   },
   "volta": {
     "node": "18.18.1",
-    "yarn": "1.22.19"
+    "yarn": "3.6.4"
   }
 }
