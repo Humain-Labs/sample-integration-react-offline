@@ -20,7 +20,10 @@ To make it work, we expose the CDN-files (in the public folder), replace the CDN
   }
   ```
   
-- Copy CDN files `cp -r ./node_modules/porsche-design-system-offline/public/. ./public` so they are available in the root of your served url (no subdomain). Like ``https://localhost/...``
+- Symlink (or copy) the CND files to the folder, which is served as root of your URL (Like ``https://localhost/...``). Copying might be required for successful builds. You also need to disable tree-shaking, because the files and the CDN are not linked directly (by default).
+
+  - ``ln -s "../node_modules/@porsche-offline-design-system/manager/public/porsche-design-system" "./public/porsche-design-system"``
+  - `cp -r ./node_modules/@porsche-offline-design-system/manager/public/. ./public`
 
   
 
