@@ -10,17 +10,13 @@
     "preview": "vite preview",
     "transformToOffline": "bash ./scripts/transformToOffline.sh"
   },
-  "workspaces": [
-    "components-react",
-    "components-js"
-  ],
   "//": [
     "use line below in devDependencies",
     "@porsche-design-system/components-react: 3.9.0"
   ],
   "devDependencies": {
-    "@porsche-offline-design-system/components-react": "file:./components-react",
     "@porsche-offline-design-system/components-js": "file:./components-js",
+    "@porsche-offline-design-system/components-react": "link:./components-react",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
