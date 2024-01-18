@@ -53,6 +53,7 @@ To make it work, we expose the CDN-files (in the public folder), replace the CDN
 - Why not use @porsche-design-system? - It's protected, so you can't host your own packages. And those are required, because replacements in ``components-react`` and ``components-js`` are required.
 - If you are experimenting with this in the consumer repo run ``rm -r node_modules || rm yarn.lock || yarn install`` because odd caching things might happen otherwise
 - Don't add ``./components-(js|react)`` as a workspace. Otherwise the folders will not appear when installed (via yarn) and we need them.
+- Importing from ``components-react/styles`` directly does not work. Use ``components-js/styles`` instead.
 
 
 ## Problems
