@@ -2,7 +2,7 @@
 
 The porsche-design-system uses a CDN by default (which we can not use when offline).
 
-To make it work, we expose the CDN-files (in the public folder), replace the CDN-URLs with a dot (in the CDN and the required packages), rename the required packages ``@porsche-design-system/components-js`` ``@porsche-design-system/components-react`` to ````@porsche-offline-design-system/...`` and expose both in this repo.
+To make it work, we expose the CDN-files (in the public folder), replace the CDN-URLs with a dot (in the CDN and the required packages), rename the required packages ``@porsche-design-system/components-js`` ``@porsche-design-system/components-react`` to ``@porsche-offline-design-system/...`` and expose both in this repo.
 
 
 
