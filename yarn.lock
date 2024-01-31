@@ -616,10 +616,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@porsche-design-system/components-js@npm:3.9.0":
+  version: 3.9.0
+  resolution: "@porsche-design-system/components-js@npm:3.9.0"
+  checksum: 33b8cd3e5c0c81134f3de3a0d6e19024c08c31c9fb4fba7a0bcb291dc19fe1c75155a089d8bce831dc099b35163273b20c3f8e15d4aefc0abd9fe53db58b854e
+  languageName: node
+  linkType: hard
+
+"@porsche-design-system/components-react@npm:3.9.0":
+  version: 3.9.0
+  resolution: "@porsche-design-system/components-react@npm:3.9.0"
+  dependencies:
+    "@porsche-design-system/components-js": 3.9.0
+  peerDependencies:
+    react: ">=17.0.0 <19.0.0"
+    react-dom: ">=17.0.0 <19.0.0"
+  bin:
+    patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
+  checksum: 8648e6ba0406ad34e0b60b5e82266421cde5e7484871aaf5c2801c2cd55c4764af226d8f1924b34aecd8e0d6a2e08b0eeecf27dd58610ad3944ff44e1a0f147f
+  languageName: node
+  linkType: hard
+
 "@porsche-offline-design-system/components-js@file:./components-js::locator=%40porsche-offline-design-system%2Fmanager%40workspace%3A.":
   version: 3.9.0
-  resolution: "@porsche-offline-design-system/components-js@file:./components-js#./components-js::hash=cb2703&locator=%40porsche-offline-design-system%2Fmanager%40workspace%3A."
-  checksum: 2496db616f0b39dba75dde7d1fbeaafd63a9fb3b8eceea421bc0ec11f754d080d3c1dceac8612c956768aff07bbf0cca633941d67ece822e88814139634bd192
+  resolution: "@porsche-offline-design-system/components-js@file:./components-js#./components-js::hash=3eed27&locator=%40porsche-offline-design-system%2Fmanager%40workspace%3A."
+  checksum: f841eee581fbc8cc5ff0b4e26e61c903006c444314d66dbeda7989006656ebc5d02731beab54d2129f8b3370507f56ac9ce83f3b19b6e9bb1356f4bb27af8d8c
   languageName: node
   linkType: hard
 
@@ -633,6 +654,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@porsche-offline-design-system/manager@workspace:."
   dependencies:
+    "@porsche-design-system/components-react": 3.9.0
     "@porsche-offline-design-system/components-js": "file:./components-js"
     "@porsche-offline-design-system/components-react": "link:./components-react"
     "@types/react": ^18.2.43

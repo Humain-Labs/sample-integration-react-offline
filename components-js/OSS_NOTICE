@@ -2841,7 +2841,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 *********************************************************************
-@porsche-offline-design-system/browser-notification
+@porsche-design-system/browser-notification
 *********************************************************************
 #MIT
 Copyright (c) 2022 Dr. Ing. h.c. F. Porsche AG
@@ -2866,7 +2866,7 @@ SOFTWARE.
 
 
 *********************************************************************
-@porsche-offline-design-system/visual-regression-tester
+@porsche-design-system/visual-regression-tester
 *********************************************************************
 #MIT
 Copyright (c) 2022 Dr. Ing. h.c. F. Porsche AG
@@ -43655,7 +43655,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 *********************************************************************
-@porsche-offline-design-system/browser-notification
+@porsche-design-system/browser-notification
 *********************************************************************
 #MIT
 
@@ -43686,7 +43686,7 @@ Dr. Ing. h.c. F. Porsche AG
 
 
 *********************************************************************
-@porsche-offline-design-system/visual-regression-tester
+@porsche-design-system/visual-regression-tester
 *********************************************************************
 #MIT
 
@@ -65021,7 +65021,7 @@ Redistribution and use in source and binary forms, with or without modification,
 
 
 *********************************************************************
-@porsche-offline-design-system/browser-notification
+@porsche-design-system/browser-notification
 *********************************************************************
 #MIT
 
@@ -65052,7 +65052,7 @@ Dr. Ing. h.c. F. Porsche AG
 
 
 *********************************************************************
-@porsche-offline-design-system/components-angular
+@porsche-design-system/components-angular
 *********************************************************************
 #Apache-2.0
 
@@ -65075,7 +65075,7 @@ Dr. Ing. h.c. F. Porsche AG
 
 
 *********************************************************************
-@porsche-offline-design-system/components-js
+@porsche-design-system/components-js
 *********************************************************************
 #Apache-2.0
 
@@ -65098,7 +65098,7 @@ Dr. Ing. h.c. F. Porsche AG
 
 
 *********************************************************************
-@porsche-offline-design-system/visual-regression-tester
+@porsche-design-system/visual-regression-tester
 *********************************************************************
 #MIT
 
