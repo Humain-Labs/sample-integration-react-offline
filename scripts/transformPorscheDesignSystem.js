@@ -35,13 +35,15 @@ const changedNpmFiles = npmFilePaths.filter((filePath) => {
 
   const transformedFileContent = fileContent
     .replaceAll( "@porsche-design-system" , "@porsche-offline-design-system" )
+    .replace(/global\.PORSCHE_DESIGN_SYSTEM_CDN_URL[^;]*;/g, "global.PORSCHE_DESIGN_SYSTEM_CDN_URL=``;") // an edge-case: Empty global object, so things also work in subdomains.
     .replace(/(?<!\\)"https:\/\/cdn\.ui\.porsche\..*?\(.*?\)/g, `"${BASE_URL}"`)
     .replace(/\\"https:\/\/cdn\.ui\.porsche\..*?\(.*?\)/g, `\\"${BASE_URL}\\"`) // JSON.
     .replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)
     .replace(/`https:\/\/cdn\.ui\.porsche\..*?`/g, `'${BASE_URL}'`)
   
   fs.writeFileSync(filePath, transformedFileContent);
-  return fileContent != transformedFileContent
+  
+  return fileContent.localeCompare(transformedFileContent)
 
 });
 
@@ -70,7 +72,7 @@ const changedCdnFiles = cdnFilePaths.filter((filePath) => {
 
   fs.writeFileSync(filePath, transformedFileContent);
 
-  return fileContent != transformedFileContent
+  return fileContent.localeCompare( transformedFileContent )
 });
 fs.writeFileSync( `${cdnFolder}/readme.md`, 
 `This is a copy of the porsche-design-system CDN which "works" offline.

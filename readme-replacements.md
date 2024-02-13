@@ -1,4 +1,4 @@
-We have replaced things in the following files.
+We have replaced things in the following component-files.
 
 components-js/CHANGELOG.md
 components-js/README.md
@@ -23,8 +23,10 @@ components-react/package.json
 components-react/partials/index.cjs
 components-react/partials/index.d.ts
 components-react/partials/index.js
+components-react/ssr/cjs/components/dist/utils/esm/utils-entry.cjs
 components-react/ssr/cjs/components-react/projects/react-ssr-wrapper/src/provider.cjs
 components-react/ssr/cjs/components-react/projects/react-ssr-wrapper/src/public-api.cjs
+components-react/ssr/esm/components/dist/utils/esm/utils-entry.mjs
 components-react/ssr/esm/components-react/projects/react-ssr-wrapper/src/provider.mjs
 components-react/ssr/esm/components-react/projects/react-ssr-wrapper/src/public-api.mjs
 components-react/ssr/esm/lib/dsr-components/multi-select-option.d.ts

@@ -16,7 +16,7 @@ const PorscheDesignSystemProvider = ({ prefix = '', cdn, theme = 'light', ...pro
         // for ssr we set the global PORSCHE_DESIGN_SYSTEM_CDN_URL variable that is used in our getCDNBaseURL() util to respect the cdn
         const tld = cdn === 'cn' ? 'cn' : 'com';
         // @ts-ignore
-        global.PORSCHE_DESIGN_SYSTEM_CDN_URL = '.';
+        global.PORSCHE_DESIGN_SYSTEM_CDN_URL=``;
     }
     react.useEffect(() => {
         componentsJs.load({ prefix, cdn });
