@@ -1,6 +1,6 @@
 'use strict';
 
-var partials = require('@porsche-design-system/components-js/partials');
+var partials = require('@porsche-offline-design-system/components-js/partials');
 
 
 

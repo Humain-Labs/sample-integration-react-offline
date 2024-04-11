@@ -1,7 +1,7 @@
 'use client';
 import { jsx } from 'react/jsx-runtime';
 import { createContext, useEffect } from 'react';
-import { load } from '@porsche-design-system/components-js';
+import { load } from '@porsche-offline-design-system/components-js';
 
 // to warn users about missing PorscheDesignSystemProvider, we set the default values as undefined
 const PorscheDesignSystemContext = createContext({
@@ -14,7 +14,7 @@ const PorscheDesignSystemProvider = ({ prefix = '', cdn, theme = 'light', ...pro
         // for ssr we set the global PORSCHE_DESIGN_SYSTEM_CDN_URL variable that is used in our getCDNBaseURL() util to respect the cdn
         const tld = cdn === 'cn' ? 'cn' : 'com';
         // @ts-ignore
-        global.PORSCHE_DESIGN_SYSTEM_CDN_URL = `https://cdn.ui.porsche.${tld}`;
+        global.PORSCHE_DESIGN_SYSTEM_CDN_URL=``;
     }
     useEffect(() => {
         load({ prefix, cdn });

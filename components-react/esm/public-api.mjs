@@ -1,4 +1,4 @@
-export { componentsReady } from '@porsche-design-system/components-js';
+export { componentsReady } from '@porsche-offline-design-system/components-js';
 export { PAccordion } from './lib/components/accordion.wrapper.mjs';
 export { PBanner } from './lib/components/banner.wrapper.mjs';
 export { PButton } from './lib/components/button.wrapper.mjs';

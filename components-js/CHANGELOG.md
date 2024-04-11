@@ -4,10 +4,10 @@
 
 All notable changes to this project will be documented in this file and published as following npm packages:
 
-- `@porsche-design-system/components-js`
-- `@porsche-design-system/components-angular`
-- `@porsche-design-system/components-react`
-- `@porsche-design-system/components-vue`
+- `@porsche-offline-design-system/components-js`
+- `@porsche-offline-design-system/components-angular`
+- `@porsche-offline-design-system/components-react`
+- `@porsche-offline-design-system/components-vue`
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -694,8 +694,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Styles: `gridStyles` and `pds-grid()` are supporting an additional column range called `wide`
   ([#2422](https://github.com/porsche-design-system/porsche-design-system/pull/2422))
-- Styles: SCSS version needs to be imported by `@porsche-design-system/components-js/styles` instead of
-  `@porsche-design-system/components-js/styles/scss`
+- Styles: SCSS version needs to be imported by `@porsche-offline-design-system/components-js/styles` instead of
+  `@porsche-offline-design-system/components-js/styles/scss`
   ([#2422](https://github.com/porsche-design-system/porsche-design-system/pull/2422))
 
 #### Removed
@@ -1095,7 +1095,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - `Stepper Horizontal` matches new design language
 - Styles: Optimize design tokens "spacing", "typography" and "theme" provided by styles sub-package
-  `@porsche-design-system/components-{js|angular|react|vue}/styles`
+  `@porsche-offline-design-system/components-{js|angular|react|vue}/styles`
 - Styles: Use calc() instead of max() to calculate padding for `gridStyle` (JS) and `pds-grid()` (SCSS)
 - Styles: `gridStyle` (JS) and `pds-grid()` (SCSS) uses optimized grid gap
 
@@ -1215,9 +1215,9 @@ possible. Nevertheless, there are a few breaking changes and some more deprecati
 - `getIconLinks()` partial accepts only param-cased icon names.
 
 ```diff
-- require('@porsche-design-system/components-js/partials').getIconLinks({ icons: ['arrowRight'] })
+- require('@porsche-offline-design-system/components-js/partials').getIconLinks({ icons: ['arrowRight'] })
 
-+ require('@porsche-design-system/components-js/partials').getIconLinks({ icons: ['arrow-right'] })
++ require('@porsche-offline-design-system/components-js/partials').getIconLinks({ icons: ['arrow-right'] })
 ```
 
 ##### CSS global scope:
@@ -1525,9 +1525,9 @@ to the new values since those ones will be removed with next major version.
 
 #### Added
 
-- `jsdom-polyfill` subpackage is available at `@porsche-design-system/components-{js|angular|react|vue}/jsdom-polyfill`
+- `jsdom-polyfill` subpackage is available at `@porsche-offline-design-system/components-{js|angular|react|vue}/jsdom-polyfill`
   and can be used to have working web components in jsdom based tests (e.g. jest)
-- `testing` subpackage is available at `@porsche-design-system/components-{js|angular|react|vue}/testing` to provide
+- `testing` subpackage is available at `@porsche-offline-design-system/components-{js|angular|react|vue}/testing` to provide
   `getByRoleShadowed`, `getByLabelTextShadowed` and `getByTextShadowed` utilities which use `@testing-library/dom`
   queries internally to support Shadow DOM
 - Validation if `prefix` is already reserved by a different version upon initialization of the Porsche Design System
@@ -1541,7 +1541,7 @@ to the new values since those ones will be removed with next major version.
 
 #### Fixed
 
-- Bug in `@porsche-design-system/components-react/ssr` where in some cases during SSG an error was thrown when
+- Bug in `@porsche-offline-design-system/components-react/ssr` where in some cases during SSG an error was thrown when
   components render their children conditionally
 
 ### [2.19.0] - 2022-12-22
@@ -1558,7 +1558,7 @@ to the new values since those ones will be removed with next major version.
 
 #### Added
 
-- Vue: typed components are available via the `@porsche-design-system/components-vue` package
+- Vue: typed components are available via the `@porsche-offline-design-system/components-vue` package
 
 #### Fixed
 
@@ -1604,16 +1604,16 @@ to the new values since those ones will be removed with next major version.
 #### Added
 
 - SSR/SSG ready components using Declarative Shadow DOM for Next JS are shipped via
-  `@porsche-design-system/components-react/ssr`. To use it simply change your imports.
+  `@porsche-offline-design-system/components-react/ssr`. To use it simply change your imports.
 
 **Important:** make sure to apply the new `getDSRPonyfill()` partial right before your closing `</body>` tag. More
 information can be found here:
 [getDSRPonyfill() documentation](https://designsystem.porsche.com/latest/partials/dsr-ponyfill)
 
 ```diff
-- import { PorscheDesignSystemProvider, PButton, ... } from '@porsche-design-system/components-react';
-+ import { PorscheDesignSystemProvider, PButton, ... } from '@porsche-design-system/components-react/ssr';
-+ import { getDSRPonyfill } from '@porsche-design-system/components-react/partials';
+- import { PorscheDesignSystemProvider, PButton, ... } from '@porsche-offline-design-system/components-react';
++ import { PorscheDesignSystemProvider, PButton, ... } from '@porsche-offline-design-system/components-react/ssr';
++ import { getDSRPonyfill } from '@porsche-offline-design-system/components-react/partials';
 ```
 
 #### Changed
@@ -1697,7 +1697,7 @@ information can be found here:
 
 #### Changed
 
-- Downgraded `@angular` to `v13` to ensure backwards compatibility of `@porsche-design-system/components-angular`
+- Downgraded `@angular` to `v13` to ensure backwards compatibility of `@porsche-offline-design-system/components-angular`
 
 ### [2.15.0-rc.0] - 2022-08-16
 
@@ -1735,9 +1735,9 @@ information can be found here:
 #### Added
 
 - `getBrowserSupportFallbackScript()` partial supporting `cdn` and `format` options as replacement for
-  `includeOverlay()` of `@porsche-design-system/browser-notification` npm package
+  `includeOverlay()` of `@porsche-offline-design-system/browser-notification` npm package
 - `getCookiesFallbackScript()` partial supporting `cdn` and `format` options as replacement for `includeCookieOverlay()`
-  of `@porsche-design-system/browser-notification` npm package
+  of `@porsche-offline-design-system/browser-notification` npm package
 
 #### Changed
 
@@ -2366,20 +2366,20 @@ Please refer to our framework specific guidelines
 #### Prevent Flash of Unstyled Content (FOUC) and Flash of Unstyled Text (FOUT)
 
 To prevent FOUC/FOUT, the Porsche Design System offers various partials as part of the
-`@porsche-design-system/components-{js|angular|react}` package to ensure all necessary Porsche Design System fonts and
-components are fully loaded. If you've used the `@porsche-design-system/partials` package previously, stop using it and
-replace the integration with the partials provided by `@porsche-design-system/components-{js|angular|react}` package.
+`@porsche-offline-design-system/components-{js|angular|react}` package to ensure all necessary Porsche Design System fonts and
+components are fully loaded. If you've used the `@porsche-offline-design-system/partials` package previously, stop using it and
+replace the integration with the partials provided by `@porsche-offline-design-system/components-{js|angular|react}` package.
 Have a look at our [FOUC/FOUT guidelines](https://designsystem.porsche.com/latest/performance/loading-behaviour).
 
 ```diff
-- <%= require('@porsche-design-system/partials').getPorscheDesignSystemCoreStyles() %>
-+ <%= require('@porsche-design-system/components-{js|angular|react}/partials').getInitialStyles() %>
+- <%= require('@porsche-offline-design-system/partials').getPorscheDesignSystemCoreStyles() %>
++ <%= require('@porsche-offline-design-system/components-{js|angular|react}/partials').getInitialStyles() %>
 
-- <%= require('@porsche-design-system/partials').getFontFaceCSS() %>
-+ <%= require('@porsche-design-system/components-{js|angular|react}/partials').getFontFaceStylesheet() %>
+- <%= require('@porsche-offline-design-system/partials').getFontFaceCSS() %>
++ <%= require('@porsche-offline-design-system/components-{js|angular|react}/partials').getFontFaceStylesheet() %>
 
 - <link rel="preload" href="path/to/webfont/nameOfWebFontFile" as="font" type="font/woff2" crossorigin />
-+ <%= require('@porsche-design-system/components-{js|angular|react}/partials').getFontLinks({ weights: ['regular', 'semi-bold'] }) %>
++ <%= require('@porsche-offline-design-system/components-{js|angular|react}/partials').getFontLinks({ weights: ['regular', 'semi-bold'] }) %>
 ```
 
 #### Added support for China CDN
@@ -2415,7 +2415,7 @@ web components of the Porsche Design System.
 
 Because the Porsche Design System components get loaded async at the time they are needed, it might be relevant within
 your application or test automation to know when those have been initialized. Therefore, we provide in all three
-`@porsche-design-system/components-{js|angular|react}')` packages a reliable helper function `componentsReady()`.
+`@porsche-offline-design-system/components-{js|angular|react}')` packages a reliable helper function `componentsReady()`.
 [Read more about it](https://designsystem.porsche.com/latest/helpers/components-ready).
 
 #### Removed "blur on focus"
@@ -2426,7 +2426,7 @@ supporting `:focus-visible` otherwise it will fallback to `:focus` CSS implement
 #### Changed focus styling for a better compromise between accessibility and visual appearance
 
 Color and outline of general focus styling has changed to `currentColor` for light/dark theme with an outline of 1px
-width/offset. If you have custom components build with the usage of our `@porsche-design-system/utilities` package then
+width/offset. If you have custom components build with the usage of our `@porsche-offline-design-system/utilities` package then
 update it to the latest version.
 
 #### Improved geometry of Porsche Next font
@@ -2437,7 +2437,7 @@ change of font size and spacing.
 #### Dropped support for IE11 and EdgeHTML according to Porsche's official browser strategy 2021
 
 If you still need to support these browsers, you have to stick to `v1.5.x`. We offer a Browser Notification package
-`@porsche-design-system/browser-notification` to alert users that these browsers are no longer supported. It supports a
+`@porsche-offline-design-system/browser-notification` to alert users that these browsers are no longer supported. It supports a
 blocking layer (to be used with Porsche Design System `v2.x`), or a dismissible banner (to be used with Porsche Design
 System `v1.x`). Please refer to our
 [Browser compatibility guidelines](https://designsystem.porsche.com/latest/help/browser-compatibility).
@@ -2517,7 +2517,7 @@ registration of the Porsche Design System components and loading of polyfills. D
 
 #### Integration of React components
 
-In the past `@porsche-design-system/components-react` components have initialized the **Porsche Design System Loader**
+In the past `@porsche-offline-design-system/components-react` components have initialized the **Porsche Design System Loader**
 automatically as soon as a component was imported. With `v2.x` you have to import the `PorscheDesignSystemProvider` once
 in your `index.tsx` which then initializes the **Porsche Design System Loader**, e.g. like:
 
@@ -2525,7 +2525,7 @@ in your `index.tsx` which then initializes the **Porsche Design System Loader**,
   // index.tsx
 
   import ReactDOM from 'react-dom';
-  import { PorscheDesignSystemProvider } from '@porsche-design-system/components-react';
+  import { PorscheDesignSystemProvider } from '@porsche-offline-design-system/components-react';
   import { App } from './App';
 
   ReactDOM.render(
@@ -2543,7 +2543,7 @@ For advanced usage please [read further](https://designsystem.porsche.com/latest
 #### Jsdom Polyfill for React / Jest / jsdom test automation
 
 We removed test mocks for React / Jest / jsdom as Shadow DOM is supported since jsdom v12.2.0. Instead, we provide a
-Jsdom Polyfill (exclusivly for `@porsche-design-system/components-react` package) fixing missing implementation of jsdom
+Jsdom Polyfill (exclusivly for `@porsche-offline-design-system/components-react` package) fixing missing implementation of jsdom
 which the Porsche Design System relies on. **Note:** If your test includes Porsche Design System components, make sure
 to wrap the component you want to test with a PorscheDesignSystemProvider in order to avoid exceptions. For more
 information please [read further](https://designsystem.porsche.com/latest/start-coding/react).
@@ -2555,7 +2555,7 @@ information please [read further](https://designsystem.porsche.com/latest/start-
 #### Integration of Vanilla JS components
 
 With `v1.x` of the Porsche Design System you've had to copy all needed JS files of
-`@porsche-design-system/components-js` into your target directory and include the ES5 and ESM loader snippet. Now you
+`@porsche-offline-design-system/components-js` into your target directory and include the ES5 and ESM loader snippet. Now you
 only need to copy one `index.js` file and initialize the Porsche Design System like in the example below:
 
 ```diff
@@ -2565,9 +2565,9 @@ only need to copy one `index.js` file and initialize the Porsche Design System l
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <title>Porsche Design System</title>
--     <script nomodule src="PATH/TO/PACKAGE/@porsche-design-system/components-js/dist/porsche-design-system/porsche-design-system.js"></script>
--     <script type="module" src="PATH/TO/PACKAGE/@porsche-design-system/components-js/dist/porsche-design-system/porsche-design-system.esm.js"></script>
-+     <script src="PATH/TO/PACKAGE/@porsche-design-system/components-js/index.js"></script>
+-     <script nomodule src="PATH/TO/PACKAGE/@porsche-offline-design-system/components-js/dist/porsche-design-system/porsche-design-system.js"></script>
+-     <script type="module" src="PATH/TO/PACKAGE/@porsche-offline-design-system/components-js/dist/porsche-design-system/porsche-design-system.esm.js"></script>
++     <script src="PATH/TO/PACKAGE/@porsche-offline-design-system/components-js/index.js"></script>
     </head>
     <body>
 +     <script type="text/javascript">

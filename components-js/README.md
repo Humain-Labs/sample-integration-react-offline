@@ -11,18 +11,18 @@ to learn more.
 Run the following command using [npm](https://www.npmjs.com):
 
 ```bash
-npm install @porsche-design-system/components-js
+npm install @porsche-offline-design-system/components-js
 ```
 
 If you prefer [Yarn](https://yarnpkg.com), use the following command instead:
 
 ```bash
-yarn add @porsche-design-system/components-js
+yarn add @porsche-offline-design-system/components-js
 ```
 
 ### Usage
 
-After adding the `@porsche-design-system/components-js` package to your project, the following page setup is recommended
+After adding the `@porsche-offline-design-system/components-js` package to your project, the following page setup is recommended
 (assuming a web server is running).
 
 ```html
@@ -32,7 +32,7 @@ After adding the `@porsche-design-system/components-js` package to your project,
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Porsche Design System</title>
-    <script src="PATH/TO/PACKAGE/@porsche-design-system/components-js/index.js"></script>
+    <script src="PATH/TO/PACKAGE/@porsche-offline-design-system/components-js/index.js"></script>
   </head>
   <body>
     <script type="text/javascript">
