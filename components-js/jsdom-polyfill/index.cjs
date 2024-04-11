@@ -27644,7 +27644,7 @@ function requireSrc () {
 	// '3.9.0' is replaced during build
 	document.porscheDesignSystem = {
 	  cdn: {
-	    url: '.', // needs to be set because we're not initializing via components-js load() method which would normally set this
+	    url: 'https://cdn.ui.porsche.com', // needs to be set because we're not initializing via components-js load() method which would normally set this
 	    prefixes: [],
 	  },
 	  ['3.9.0']: {

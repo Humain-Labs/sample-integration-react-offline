@@ -1,1 +1,1 @@
-declare module '@porsche-offline-design-system/components-js/jsdom-polyfill';
+declare module '@porsche-design-system/components-js/jsdom-polyfill';

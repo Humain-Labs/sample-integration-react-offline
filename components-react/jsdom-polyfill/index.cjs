@@ -1,6 +1,6 @@
 'use strict';
 
-var jsdomPolyfill = require('@porsche-offline-design-system/components-js/jsdom-polyfill');
+var jsdomPolyfill = require('@porsche-design-system/components-js/jsdom-polyfill');
 
 
 

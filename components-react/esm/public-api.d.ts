@@ -1,4 +1,4 @@
-export { componentsReady } from '@porsche-offline-design-system/components-js';
+export { componentsReady } from '@porsche-design-system/components-js';
 export * from './lib/components';
 export * from './lib/types';
 export { PorscheDesignSystemProvider } from './provider';

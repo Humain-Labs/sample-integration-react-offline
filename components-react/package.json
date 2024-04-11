@@ -1,5 +1,5 @@
 {
-  "name": "@porsche-offline-design-system/components-react",
+  "name": "@porsche-design-system/components-react",
   "version": "3.9.0",
   "description": "Porsche Design System is a component library designed to help developers create the best experience for software or services distributed by Dr. Ing. h.c. F. Porsche AG.",
   "keywords": [
@@ -12,12 +12,12 @@
     "react",
     "js"
   ],
-  "scope": "@porsche-offline-design-system",
+  "scope": "@porsche-design-system",
   "author": "Dr. Ing. h.c. F. Porsche AG",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://designsystem.porsche.com",
   "dependencies": {
-    "@porsche-offline-design-system/components-js": "3.9.0"
+    "@porsche-design-system/components-js": "3.9.0"
   },
   "peerDependencies": {
     "react": ">=17.0.0 <19.0.0",

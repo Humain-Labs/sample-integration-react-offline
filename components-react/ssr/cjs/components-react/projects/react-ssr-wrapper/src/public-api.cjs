@@ -1,6 +1,6 @@
 'use strict';
 
-var componentsJs = require('@porsche-offline-design-system/components-js');
+var componentsJs = require('@porsche-design-system/components-js');
 var accordion_wrapper = require('./lib/components/accordion.wrapper.cjs');
 var banner_wrapper = require('./lib/components/banner.wrapper.cjs');
 var button_wrapper = require('./lib/components/button.wrapper.cjs');

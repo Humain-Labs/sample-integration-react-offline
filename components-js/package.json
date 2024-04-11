@@ -1,5 +1,5 @@
 {
-  "name": "@porsche-offline-design-system/components-js",
+  "name": "@porsche-design-system/components-js",
   "version": "3.9.0",
   "description": "Porsche Design System is a component library designed to help developers create the best experience for software or services distributed by Dr. Ing. h.c. F. Porsche AG.",
   "keywords": [
@@ -12,7 +12,7 @@
     "vanilla",
     "js"
   ],
-  "scope": "@porsche-offline-design-system",
+  "scope": "@porsche-design-system",
   "author": "Dr. Ing. h.c. F. Porsche AG",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://designsystem.porsche.com",
