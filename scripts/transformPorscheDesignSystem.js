@@ -63,11 +63,10 @@ const changedCdnFiles = cdnFilePaths.filter((filePath) => {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const transformedFileContent = fileContent
     .replaceAll( "@porsche-design-system" , "@porsche-offline-design-system" )
-    .replaceAll("url('https://cdn.ui.porsche.com/", "url('/") // we don't want "./" in css just "/" so root url is referenced.
-    .replaceAll("url('https://cdn.ui.porsche.cn/", "url('/") // we don't want "./" in css just "/" so root url is referenced.
+    .replaceAll("url('https://cdn.ui.porsche.com/porsche-design-system/", "url('../") // make links to fonts relative, so cdn-files can live in a subdomain
+    .replaceAll("url('https://cdn.ui.porsche.cn/porsche-design-system/", "url('../") // make links to fonts relative, so cdn-files can live in a subdomain
     // not sure, where the localhost 3001 is coming from...
-    .replaceAll("http://localhost:3001/fonts", "/porsche-design-system/fonts") // we don't want "./" in css just "/" so root url is referenced.
-    .replaceAll("3001", "3333") // we don't want "./" in css just "/" so root url is referenced.
+    .replaceAll("http://localhost:3001/fonts", "../fonts") // make links to fonts relative, so cdn-files can live in a subdomain
     .replace(/https:\/\/cdn\.ui\.porsche\.(?:com|cn)/g, BASE_URL)
 
   fs.writeFileSync(filePath, transformedFileContent);
