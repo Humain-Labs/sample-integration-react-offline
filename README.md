@@ -1,8 +1,8 @@
 # Sample Integration React Offline
 
-The porsche-design-system uses a CDN by default (which we can not use when offline).
+This is a test to make the porsche-design-system usable in environments, that have no internet access (it uses a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) by default).
 
-To make it work, we expose the CDN-files (in the public folder), replace the CDN-URLs with a dot (in the CDN and the required packages), rename the required packages ``@porsche-design-system/components-js`` ``@porsche-design-system/components-react`` to ``@porsche-offline-design-system/...`` and expose both in this repo.
+To make this work, we expose the CDN-files (in the public folder), replace the CDN-URLs with a dot and relative URLs (in the CDN and the required packages), rename the required packages ``@porsche-design-system/components-js`` ``@porsche-design-system/components-react`` to ``@porsche-offline-design-system/...`` and expose both in this repo.
 
 
 
@@ -11,7 +11,7 @@ To make it work, we expose the CDN-files (in the public folder), replace the CDN
 - include this repo in your consumer-repo (with the right version tag, like)
   ``"@porsche-offline-design-system/manager": "https://github.com/Humain-Labs/sample-integration-react-offline.git#v3.9.0"``
   
-- link components-js and components-react like
+- link components-js and components-react like (yarn > 4)
   
   ```json
   devDependencies: {
@@ -20,7 +20,7 @@ To make it work, we expose the CDN-files (in the public folder), replace the CDN
   }
   ```
   
-- Symlink (or copy) the CND files to the folder, which is served as root of your URL (Like ``https://localhost/...``). Copying might be required for successful builds. You also need to disable tree-shaking, because the files and the CDN are not linked directly (by default).
+- Symlink (or copy) the CND files to the folder, which is served as root of your URL (Like ``https://localhost/...``). Copying might be required for successful builds. You probably also need to disable tree-shaking, because the files and the CDN are not linked directly (by default).
 
   - ``ln -s "../node_modules/@porsche-offline-design-system/manager/public/porsche-design-system" "./public/porsche-design-system"``
   - `cp -r ./node_modules/@porsche-offline-design-system/manager/public/. ./public`
@@ -50,17 +50,28 @@ To make it work, we expose the CDN-files (in the public folder), replace the CDN
 
 ## FAQ & Tips
 
-- Why not use @porsche-design-system? - It's protected, so you can't host your own packages. And those are required, because replacements in ``components-react`` and ``components-js`` are required.
+- Why not use @porsche-design-system namespace (for the package)? - It's protected, so you can't host your own packages. And those are required, because replacements in ``components-react`` and ``components-js`` are required.
 - If you are experimenting with this in the consumer repo run ``rm -r node_modules || rm yarn.lock || yarn install`` because odd caching things might happen otherwise
 - Don't add ``./components-(js|react)`` as a workspace. Otherwise the folders will not appear when installed (via yarn) and we need them.
 - Importing from ``components-react/styles`` directly does not work. Use ``components-js/styles`` instead.
 
 
-## Problems
+## Problems with this approach
 
-- The replacement is quite complex and fragile (not sure if it works with another version)
-- Not sure if there are more side-effects
-- The process is really difficult (and hard to understand, because you wouldn't normally to things like this)
+- [The replacement](https://github.com/Humain-Labs/sample-integration-react-offline/blob/main/scripts/transformPorscheDesignSystem.js) is quite complex and fragile (not sure if it works with another version).
+  This currently affects over 40 files ([see full diff of replacements](https://github.com/Humain-Labs/sample-integration-react-offline/commit/b8faaf2e21721327fe57f6b742c8fea999ffeee6)).
+- This does not work in folder dephts > 1 and is picky with slashes:
+  - If the cdn files live in **example.com/porsche-design-system** this is only usable in
+    - Example.com
+    - Example.com/foo (<- a trailing slash is not allowed here)
+    - ~~Example.com/foo/bar~~ (<- does not work)
+
+  - **example.com/foo/porsche-design-system**
+    - Example.com/foo/ (<- a trailing slash is required here)
+    - Example.com/foo/bar (<- a trailing slash is not allowed here)
+    - ~~Example.com/foo/bar/baz~~ (<- does not work)
+
+- There might me more side-effects
 
 
 ## Unsuccessful Experiments
