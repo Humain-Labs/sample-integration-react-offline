@@ -42,18 +42,6 @@ To make this work, we expose the CDN-files (in the public folder), replace the C
 - commit & push your changes
 - create a release with the same version as the version of components-react you are using (like `v3.9.0`)
 
-## Todos
-
-- Currently the consumer has to include ``components-js`` and ``components-react``. It would be nice for this repo to have those as [linked](https://yarnpkg.com/protocol/link) dependencies ([file](https://yarnpkg.com/protocol/file) does not work, because the folders don't exist when yarn collect dependencies first), but iI didn't get this running (probably because components-react depends on components-js).
-- Maybe use [Lerna](https://lerna.js.org/)?
-
-
-## FAQ & Tips
-
-- Why not use @porsche-design-system namespace (for the package)? - It's protected, so you can't host your own packages. And those are required, because replacements in ``components-react`` and ``components-js`` are required.
-- If you are experimenting with this in the consumer repo run ``rm -r node_modules || rm yarn.lock || yarn install`` because odd caching things might happen otherwise
-- Don't add ``./components-(js|react)`` as a workspace. Otherwise the folders will not appear when installed (via yarn) and we need them.
-- Importing from ``components-react/styles`` directly does not work. Use ``components-js/styles`` instead.
 
 
 ## Problems with this approach
@@ -72,6 +60,20 @@ To make this work, we expose the CDN-files (in the public folder), replace the C
     - ~~Example.com/foo/bar/baz~~ (<- does not work)
 
 - There might me more side-effects
+
+
+
+## FAQ & Tips
+
+- Why not use @porsche-design-system namespace (for the package)? - It's protected, so you can't host your own packages. And those are required, because replacements in ``components-react`` and ``components-js`` are required.
+
+- If you are experimenting with this in the consumer repo run ``rm -r node_modules || rm yarn.lock || yarn install`` because odd caching things might happen otherwise
+
+- Don't add ``./components-(js|react)`` as a workspace. Otherwise the folders will not appear when installed (via yarn) and we need them.
+
+- Importing from ``components-react/styles`` directly does not work. Use ``components-js/styles`` instead.
+
+  
 
 
 ## Unsuccessful Experiments
