@@ -48,7 +48,7 @@ To make this work, we expose the CDN-files (in the public folder), replace the C
 
 - [The replacement](https://github.com/Humain-Labs/sample-integration-react-offline/blob/main/scripts/transformPorscheDesignSystem.js) is quite complex and fragile (not sure if it works with another version).
   This currently affects over 40 files ([see full diff of replacements](https://github.com/Humain-Labs/sample-integration-react-offline/commit/b8faaf2e21721327fe57f6b742c8fea999ffeee6)).
-- This does not work in folder dephts > 1 and is picky with slashes:
+- This does not work in folder depths > 1 and is picky with slashes:
   - If the cdn files live in **example.com/porsche-design-system** this is only usable in
     - Example.com
     - Example.com/foo (<- a trailing slash is not allowed here)
